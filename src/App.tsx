@@ -1,9 +1,10 @@
+import SearchBar from "components/SearchBar/SearchBar";
 import "./main.scss";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
+    <div className="app">
+      <SearchBar />
     </div>
   );
 }

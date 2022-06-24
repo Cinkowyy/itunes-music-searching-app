@@ -1,11 +1,26 @@
+$backgroundGradient: linear-gradient(145deg, #291f2a 7%, #1a1820 80%), #0c0b10;
+$textPrimary: #cccccc;
+$textSecondary: #7d848c;
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.app {
+  width: 100%;
   min-height: 100vh;
+  padding-top: 3rem;
+  background: $backgroundGradient;
+  display: flex;
+  justify-content: center;
 }
