@@ -1,0 +1,10 @@
+.home {
+  //min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background: $backgroundGradient;
+  display: grid;
+  grid-template-rows: 1.2fr 0.8fr 7fr auto;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}

@@ -1,0 +1,19 @@
+.pagination {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3em;
+
+  &__button {
+    font-size: 1em;
+    padding: 0.8em 1.2em;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5em;
+  }
+}

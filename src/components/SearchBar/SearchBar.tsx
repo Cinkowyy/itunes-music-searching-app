@@ -6,7 +6,11 @@ const SearchBar = () => {
     <div className="searchBar">
       <div className="input input--glass">
         <FontAwesomeIcon icon={faMagnifyingGlass} className="input__icon" />
-        <input type="text" className="input__field" placeholder="Search" />
+        <input
+          type="text"
+          className="input__field"
+          placeholder="Find your favorite music"
+        />
       </div>
       <button className="searchBar__button">Search</button>
     </div>

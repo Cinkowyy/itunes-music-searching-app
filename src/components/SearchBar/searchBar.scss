@@ -1,8 +1,8 @@
 .searchBar {
   font-size: 1rem;
-  width: 60%;
-  height: max-content;
-  @include flexCenter();
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   column-gap: 1.5em;
 }
 
@@ -11,8 +11,8 @@
   height: 4em;
   display: flex;
   align-items: center;
-  border: 1px solid transparent;
-  border-radius: 1rem;
+  border: 2px solid transparent;
+  border-radius: 1.5rem;
 
   &--glass {
     background: rgba(255, 255, 255, 0.15);
@@ -47,7 +47,7 @@
   height: 3.6em;
   font-size: 1em;
   padding: 0 1.8em;
-  border-radius: 0.6rem;
+  border-radius: 1.5rem;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;

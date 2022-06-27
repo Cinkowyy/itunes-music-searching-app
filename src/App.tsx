@@ -1,10 +1,10 @@
-import SearchBar from "components/SearchBar/SearchBar";
+import Home from "pages/Home";
 import "./main.scss";
 
 function App() {
   return (
-    <div className="app">
-      <SearchBar />
+    <div className="App">
+      <Home />
     </div>
   );
 }
