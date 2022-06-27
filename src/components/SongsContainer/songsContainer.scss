@@ -1,7 +1,11 @@
 .songsContainer {
   width: 100%;
   font-size: 1rem;
-  background-color: rgba($color: #fff, $alpha: 0.2);
+  background-color: rgba($color: #fff, $alpha: 0.1);
   padding: 0 4rem;
   overflow-y: scroll;
+
+  p {
+    color: #FFF;
+  }
 }
