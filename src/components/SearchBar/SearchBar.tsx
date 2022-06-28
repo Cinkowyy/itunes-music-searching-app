@@ -18,7 +18,7 @@ const SearchBar: React.FC<searchBarProps> = ({ setFetchUrl }) => {
 
   const searchTerm = () => {
     const urlParam: string = searchedTerm.replaceAll(" ", "+");
-    const searchUrl: string = `https://itunes.apple.com/search?term=${urlParam}&entity=song&limit=48`;
+    const searchUrl: string = `https://itunes.apple.com/search?term=${urlParam}&entity=song&limit=200`;
     setFetchUrl(searchUrl);
     setSearchedTerm("");
   };

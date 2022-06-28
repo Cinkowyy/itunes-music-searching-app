@@ -23,6 +23,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [songsPerPage, setSongsPerPage] = useState<number>(12);
   const [numberOfPages, setNumberOfPages] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleFetchUrl = useCallback((url: string) => {
     setFetchUrl(url);
@@ -34,6 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchSongs = async () => {
+      setIsLoading(true);
       const fetchedResults: Response = await fetch(fetchUrl);
       const jsonResults: dataProps = await fetchedResults.json();
       const filteredResults: songProps[] = jsonResults.results.filter(
@@ -45,6 +47,7 @@ const Home = () => {
       setNumberOfPages(
         Math.round(filteredResults.length / songsPerPage + 0.49)
       );
+      setIsLoading(false);
       setSongs(filteredResults);
     };
 
@@ -58,6 +61,7 @@ const Home = () => {
         currentPage={currentPage}
         setPage={handleSetCurrentPage}
         numberOfPages={numberOfPages}
+        isLoading={isLoading}
       />
       <SongsContainer songsData={songs} currentPage={currentPage} />
       <Footer />

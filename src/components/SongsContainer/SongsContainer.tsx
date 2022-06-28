@@ -6,7 +6,7 @@ interface songsArray {
 }
 
 const SongsContainer: React.FC<songsArray> = ({ songsData, currentPage }) => {
-  const resultsNumber = songsData.length;
+  const resultsNumber: number = songsData.length;
 
   const songsPerPage: number = 12;
   const lastSongIndex: number = currentPage * songsPerPage;
