@@ -5,7 +5,12 @@
   padding: 0 4rem;
   overflow-y: scroll;
 
+  .resultsNumber {
+    margin: 1em 0;
+    font-size: 1.5em;
+  }
+
   p {
-    color: #FFF;
+    color: #fff;
   }
 }
