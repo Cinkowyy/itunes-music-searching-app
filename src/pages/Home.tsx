@@ -20,13 +20,17 @@ Camila Cabello - 935727853
 const Home = () => {
   const [songs, setSongs] = useState<songProps[]>([]);
   const [fetchUrl, setFetchUrl] = useState<string>(FETCH_URL);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [songsPerPage, setSongsPerPage] = useState<number>(12);
+  const [numberOfPages, setNumberOfPages] = useState<number>(1);
 
-  const handleFetchUrl = useCallback(
-    (url: string) => {
-      setFetchUrl(url);
-    },
-    [fetchUrl]
-  );
+  const handleFetchUrl = useCallback((url: string) => {
+    setFetchUrl(url);
+  }, []);
+
+  const handleSetCurrentPage = useCallback((pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  }, []);
 
   useEffect(() => {
     const fetchSongs = async () => {
@@ -38,17 +42,24 @@ const Home = () => {
         }
       );
 
+      setNumberOfPages(
+        Math.round(filteredResults.length / songsPerPage + 0.49)
+      );
       setSongs(filteredResults);
     };
 
     fetchSongs();
-  }, [fetchUrl]);
+  }, [fetchUrl, songsPerPage]);
 
   return (
     <div className="home">
       <SearchBar setFetchUrl={handleFetchUrl} />
-      <Pagination />
-      <SongsContainer songsData={songs} />
+      <Pagination
+        currentPage={currentPage}
+        setPage={handleSetCurrentPage}
+        numberOfPages={numberOfPages}
+      />
+      <SongsContainer songsData={songs} currentPage={currentPage} />
       <Footer />
     </div>
   );
