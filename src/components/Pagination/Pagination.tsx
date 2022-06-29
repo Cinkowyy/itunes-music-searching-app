@@ -1,14 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-interface paginationProps {
+interface IPagination {
   currentPage: number;
   numberOfPages: number;
   isLoading: boolean;
   setPage: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<paginationProps> = ({
+const Pagination: React.FC<IPagination> = ({
   currentPage,
   setPage,
   numberOfPages,
@@ -18,7 +18,9 @@ const Pagination: React.FC<paginationProps> = ({
     <div className="pagination">
       <button
         className="pagination__button"
-        onClick={() => setPage(currentPage - 1)}
+        onClick={() => {
+          if (currentPage > 1) setPage(currentPage - 1);
+        }}
         disabled={currentPage <= 1 || isLoading === true ? true : false}
       >
         <FontAwesomeIcon icon={faAngleLeft} size="lg" />
@@ -26,7 +28,9 @@ const Pagination: React.FC<paginationProps> = ({
       </button>
       <button
         className="pagination__button"
-        onClick={() => setPage(currentPage + 1)}
+        onClick={() => {
+          if (currentPage < numberOfPages) setPage(currentPage + 1);
+        }}
         disabled={
           currentPage >= numberOfPages || isLoading === true ? true : false
         }

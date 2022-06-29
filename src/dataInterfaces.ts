@@ -1,4 +1,4 @@
-export interface songProps {
+export interface Song {
   artistId: number;
   artistName: string;
   artistViewUrl: string;
@@ -32,7 +32,7 @@ export interface songProps {
   wrapperType: string;
 }
 
-export interface artistProps {
+export interface Artist {
   wrapperType: string;
   artistType: string;
   artistName: string;
@@ -43,7 +43,7 @@ export interface artistProps {
   primaryGenreId: number;
 }
 
-export interface dataProps {
+export interface FetchedData {
   resultCount: number;
-  results: (songProps | artistProps)[];
+  results: (Song | Artist)[];
 }

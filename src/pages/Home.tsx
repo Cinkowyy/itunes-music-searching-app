@@ -3,10 +3,10 @@ import Pagination from "components/Pagination/Pagination";
 import SongsContainer from "components/SongsContainer/SongsContainer";
 import Footer from "components/Footer/Footer";
 import { useCallback, useEffect, useState } from "react";
-import { dataProps, songProps, artistProps } from "dataInterfaces";
+import { FetchedData, Song, Artist } from "dataInterfaces";
 
 const FETCH_URL: string =
-  "https://itunes.apple.com/lookup?id=183313439,966309175,358714030,980795202,1750802,935727853&entity=song&limit=12&sort=popularity";
+  "https://itunes.apple.com/lookup?id=183313439,966309175,358714030,980795202,1750802,935727853&entity=song&limit=10&sort=popularity";
 
 /* 
 Ed Sheeran - 183313439
@@ -18,7 +18,7 @@ Camila Cabello - 935727853
 */
 
 const Home = () => {
-  const [songs, setSongs] = useState<songProps[]>([]);
+  const [songs, setSongs] = useState<Song[]>([]);
   const [fetchUrl, setFetchUrl] = useState<string>(FETCH_URL);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [songsPerPage, setSongsPerPage] = useState<number>(12);
@@ -36,17 +36,16 @@ const Home = () => {
   useEffect(() => {
     const fetchSongs = async () => {
       setIsLoading(true);
+      setCurrentPage(1);
       const fetchedResults: Response = await fetch(fetchUrl);
-      const jsonResults: dataProps = await fetchedResults.json();
-      const filteredResults: songProps[] = jsonResults.results.filter(
-        (value: songProps | artistProps): value is songProps => {
+      const jsonResults: FetchedData = await fetchedResults.json();
+      const filteredResults: Song[] = jsonResults.results.filter(
+        (value: Song | Artist): value is Song => {
           return value.wrapperType === "track";
         }
       );
 
-      setNumberOfPages(
-        Math.round(filteredResults.length / songsPerPage + 0.49)
-      );
+      setNumberOfPages(Math.ceil(filteredResults.length / songsPerPage));
       setIsLoading(false);
       setSongs(filteredResults);
     };

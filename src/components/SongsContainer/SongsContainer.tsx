@@ -1,17 +1,17 @@
-import { songProps } from "dataInterfaces";
+import { Song } from "dataInterfaces";
 
-interface songsArray {
-  songsData: songProps[];
+interface SongsArray {
+  songsData: Song[];
   currentPage: number;
 }
 
-const SongsContainer: React.FC<songsArray> = ({ songsData, currentPage }) => {
+const SongsContainer: React.FC<SongsArray> = ({ songsData, currentPage }) => {
   const resultsNumber: number = songsData.length;
 
   const songsPerPage: number = 12;
   const lastSongIndex: number = currentPage * songsPerPage;
   const firstSongIndex: number = lastSongIndex - songsPerPage;
-  const songsPage: songProps[] = songsData.slice(firstSongIndex, lastSongIndex);
+  const songsPage: Song[] = songsData.slice(firstSongIndex, lastSongIndex);
 
   return (
     <div className="songsContainer">
