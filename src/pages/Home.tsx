@@ -21,6 +21,7 @@ const Home = () => {
   const [songs, setSongs] = useState<Song[]>([]);
   const [fetchUrl, setFetchUrl] = useState<string>(FETCH_URL);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [songsPerPage, setSongsPerPage] = useState<number>(12);
   const [numberOfPages, setNumberOfPages] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
