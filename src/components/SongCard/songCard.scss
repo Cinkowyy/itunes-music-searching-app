@@ -1,5 +1,6 @@
 .songCard {
-  width: 22%;
+  width: 25em;
+  height: 9em;
   display: flex;
   align-items: center;
   background-color: #1f1f2d;
@@ -7,22 +8,30 @@
   column-gap: 1.5em;
   border-radius: 1.5rem;
   box-shadow: 0 6px 16px 0 rgba(18, 18, 19, 0.3);
-}
 
-.cardContent {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5em;
+  &__image {
+    border-radius: 1.5rem;
+  }
 
-  .songDetails {
-    &__track {
-      font-size: 1.2em;
-      color: rgba($color: #fff, $alpha: 0.87);
-      margin-bottom: 0.2em;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+
+    .songDetails {
+      &__track {
+        font-size: 1.2em;
+        color: $textPrimary;
+        margin-bottom: 0.2em;
+      }
+
+      &__artist {
+        color: $textSecondary;
+      }
     }
+  }
 
-    &__artist {
-      color: #9ca5af;
-    }
+  &__player {
+    color: rgb(173, 255, 47);
   }
 }

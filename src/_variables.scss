@@ -1,3 +1,6 @@
 $backgroundGradient: linear-gradient(145deg, #291f2a 7%, #1a1820 80%), #0c0b10;
-$textPrimary: #cccccc;
-$textSecondary: #7d848c;
+$textPrimary: rgba(
+  $color: #fff,
+  $alpha: 0.87,
+);
+$textSecondary: #9ca5af;
