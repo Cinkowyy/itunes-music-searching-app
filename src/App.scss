@@ -1,3 +1,13 @@
+@font-face {
+  font-family: BronovaRegular;
+  src: url(fonts/BronovaRegular.woff);
+}
+
+@font-face {
+  font-family: BronovaBold;
+  src: url(fonts/BronovaBold.woff);
+}
+
 *,
 *::before,
 *::after {
@@ -8,4 +18,8 @@
 
 ::-webkit-scrollbar {
   width: 0;
+}
+
+body {
+  font-family: "BronovaRegular", sans-serif;
 }

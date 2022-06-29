@@ -32,11 +32,12 @@
   &__field {
     height: 100%;
     width: 85%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     background: transparent;
     border: none;
     outline: none;
     color: #fff;
+    font-family: "BronovaRegular", sans-serif;
   }
 
   &:focus-within {
@@ -55,6 +56,7 @@
   border: 2px solid transparent;
   background-color: #fff;
   transition: all 0.1s ease-in-out;
+  font-family: "BronovaBold", sans-serif;
 
   &:hover {
     border-color: #fff;

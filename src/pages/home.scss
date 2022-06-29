@@ -4,7 +4,12 @@
   width: 100%;
   background: $backgroundGradient;
   display: grid;
-  grid-template-rows: 1.2fr 0.8fr 7fr auto;
+  grid-template-rows: 1.2fr 0.8fr auto 7fr auto;
   grid-template-columns: 1fr;
-  row-gap: 2rem;
+
+  .resultsNumber {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgba($color: #fff, $alpha: 0.87);
+  }
 }

@@ -8,7 +8,7 @@ export interface Song {
   collectionCensoredName: string;
   collectionExplicitness: string;
   collectionId: number;
-  ollectionName: string;
+  collectionName: string;
   collectionPrice: number;
   collectionViewUrl: string;
   country: string;

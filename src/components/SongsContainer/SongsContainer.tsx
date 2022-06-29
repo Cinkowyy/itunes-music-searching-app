@@ -1,3 +1,4 @@
+import SongCard from "components/SongCard/SongCard";
 import { Song } from "dataInterfaces";
 
 interface SongsArray {
@@ -6,8 +7,6 @@ interface SongsArray {
 }
 
 const SongsContainer: React.FC<SongsArray> = ({ songsData, currentPage }) => {
-  const resultsNumber: number = songsData.length;
-
   const songsPerPage: number = 12;
   const lastSongIndex: number = currentPage * songsPerPage;
   const firstSongIndex: number = lastSongIndex - songsPerPage;
@@ -15,17 +14,8 @@ const SongsContainer: React.FC<SongsArray> = ({ songsData, currentPage }) => {
 
   return (
     <div className="songsContainer">
-      <p className="resultsNumber">
-        {resultsNumber > 0
-          ? `Number of results: ${resultsNumber}`
-          : "No results"}
-      </p>
       {songsPage.map((song) => {
-        return (
-          <p key={song.trackId}>
-            {song.artistName} - {song.trackName}
-          </p>
-        );
+        return <SongCard key={song.trackId} {...song} />;
       })}
     </div>
   );
