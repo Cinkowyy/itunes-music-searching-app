@@ -23,3 +23,20 @@
     }
   }
 }
+
+@media screen and (min-width: 420px) and (max-width: 576px) {
+  .pagination {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 421px) {
+  .pagination {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .pagination {
+    font-size: 0.65rem;
+  }
+}

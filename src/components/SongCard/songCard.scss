@@ -1,6 +1,6 @@
 .songCard {
-  width: 25em;
-  height: 9em;
+  width: 25rem;
+  height: 9rem;
   display: flex;
   align-items: center;
   background-color: #1f1f2d;
@@ -10,12 +10,18 @@
   box-shadow: 0 6px 16px 0 rgba(18, 18, 19, 0.3);
 
   &__image {
-    border-radius: 1.5rem;
+    min-width: 100px;
+    min-height: 100px;
+
+    & img {
+      border-radius: 1.5rem;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    width: 100%;
     row-gap: 0.5em;
 
     .songDetails {
@@ -33,5 +39,30 @@
 
   &__player {
     color: rgb(173, 255, 47);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 576px) {
+  .songCard {
+    width: 80%;
+    max-width: 460px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 420px) {
+  .songCard {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .songCard {
+    width: 90%;
+    font-size: 0.8rem;
+    height: 8rem;
+    column-gap: 1em;
+    padding: 1em;
   }
 }

@@ -4,9 +4,14 @@ import { Song } from "dataInterfaces";
 interface SongsArray {
   songsData: Song[];
   currentPage: number;
+  isLoading: boolean;
 }
 
-const SongsContainer: React.FC<SongsArray> = ({ songsData, currentPage }) => {
+const SongsContainer: React.FC<SongsArray> = ({
+  songsData,
+  currentPage,
+  isLoading,
+}) => {
   const songsPerPage: number = 12;
   const lastSongIndex: number = currentPage * songsPerPage;
   const firstSongIndex: number = lastSongIndex - songsPerPage;
@@ -14,6 +19,14 @@ const SongsContainer: React.FC<SongsArray> = ({ songsData, currentPage }) => {
 
   return (
     <div className="songsContainer">
+      <div className={`loaderContainer ${!isLoading ? "loaded" : ""}`}>
+        <div className="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       {songsPage.map((song) => {
         return <SongCard key={song.trackId} {...song} />;
       })}

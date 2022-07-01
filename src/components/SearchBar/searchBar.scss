@@ -2,7 +2,7 @@
   font-size: 1rem;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   column-gap: 1.5em;
   margin-top: 2em;
 }
@@ -62,5 +62,25 @@
     border-color: #fff;
     background: transparent;
     color: #fff;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 576px) {
+  .searchBar {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 421px) {
+  .searchBar {
+    font-size: 0.7rem;
+    column-gap: 0.6em;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .searchBar {
+    font-size: 0.58rem;
+    column-gap: 0.6em;
   }
 }

@@ -66,7 +66,11 @@ const Home = () => {
       <p className="resultsNumber">
         {songs.length > 0 ? `Number of results: ${songs.length}` : "No results"}
       </p>
-      <SongsContainer songsData={songs} currentPage={currentPage} />
+      <SongsContainer
+        isLoading={isLoading}
+        songsData={songs}
+        currentPage={currentPage}
+      />
       <Footer />
     </div>
   );

@@ -11,3 +11,21 @@
     color: $textPrimary;
   }
 }
+
+@media screen and (min-width: 421px) and (max-width: 576px) {
+  .home .resultsNumber {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 420px) {
+  .home .resultsNumber {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .home .resultsNumber {
+    font-size: 1.1rem;
+  }
+}
