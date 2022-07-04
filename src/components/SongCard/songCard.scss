@@ -21,10 +21,16 @@
   &__content {
     display: flex;
     flex-direction: column;
-    width: 100%;
     row-gap: 0.5em;
+    width: 65%;
 
     .songDetails {
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
       &__track {
         font-size: 1.2em;
         color: $textPrimary;
@@ -47,6 +53,10 @@
   .songCard {
     width: 80%;
     max-width: 460px;
+
+    &__content {
+      width: 60%;
+    }
   }
 }
 
@@ -54,6 +64,10 @@
   .songCard {
     width: 90%;
     font-size: 0.9rem;
+
+    &__content {
+      width: 55%;
+    }
   }
 }
 
@@ -64,5 +78,9 @@
     height: 8rem;
     column-gap: 1em;
     padding: 1em;
+
+    &__content {
+      width: 50%;
+    }
   }
 }
