@@ -18,7 +18,7 @@ const Footer = () => {
         <RiLinkedinBoxFill size={iconSize} />
       </div>
       <div className="footer__author">
-        <p>Marcin Sitarz</p>
+        <p>Cinkowyy</p>
       </div>
     </div>
   );

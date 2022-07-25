@@ -2,6 +2,14 @@ import { Song } from "dataInterfaces";
 import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import { useEffect, useState } from "react";
 
+
+
+const playerStyles = {
+  background: "transparent",
+  boxShadow: "none",
+  padding: "10px 0"
+}
+
 const SongCard: React.FC<Song> = (props) => {
   const [songUrl, setSongUrl] = useState<string>("");
 
@@ -32,6 +40,7 @@ const SongCard: React.FC<Song> = (props) => {
             customVolumeControls={[]}
             customProgressBarSection={[RHAP_UI.PROGRESS_BAR]}
             layout="horizontal-reverse"
+            style={playerStyles}
           />
         </div>
       </div>
