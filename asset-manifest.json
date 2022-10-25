@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/itunes-music-searching-app/static/css/main.dbd21c0f.css",
+    "main.js": "/itunes-music-searching-app/static/js/main.5f05b804.js",
+    "static/js/787.66a00e4e.chunk.js": "/itunes-music-searching-app/static/js/787.66a00e4e.chunk.js",
+    "static/media/BronovaBold.woff": "/itunes-music-searching-app/static/media/BronovaBold.9ad888c04a76daed3125.woff",
+    "static/media/BronovaRegular.woff": "/itunes-music-searching-app/static/media/BronovaRegular.b59bd7c8339353c7888f.woff",
+    "index.html": "/itunes-music-searching-app/index.html",
+    "main.dbd21c0f.css.map": "/itunes-music-searching-app/static/css/main.dbd21c0f.css.map",
+    "main.5f05b804.js.map": "/itunes-music-searching-app/static/js/main.5f05b804.js.map",
+    "787.66a00e4e.chunk.js.map": "/itunes-music-searching-app/static/js/787.66a00e4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbd21c0f.css",
+    "static/js/main.5f05b804.js"
+  ]
+}
