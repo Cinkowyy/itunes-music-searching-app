@@ -7,6 +7,9 @@ App displays a list of songs with title, artist and album art. The user can list
 App fetch data from the iTunes Search API <br/>
 Link: https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html
 
+# Live
+GitHub Pages link: https://cinkowyy.github.io/itunes-music-searching-app/
+
 ## Technologies Used
 - React
 - TypeScript
